@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&family=Open+Sans:ital,wght@0,300;0,400;1,700,900&display=swap" rel="stylesheet">    
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,600&family=Open+Sans:ital,wght@0,300;0,400;1,700,800,900&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">   
 </head>
 <body id="body">
   <div class="overlay overlay_open" id="menuOverlay">
@@ -115,7 +116,7 @@
         </span>
       </div>
       <div class="sidebar__posts sidebar-posts sidebar-item">
-        <h5 class="sidebar-item__title">Posts</h5>
+        <h5 class="sidebar-item__title sidebar-categories__title">Posts</h5>
         <div class="sidebar-posts__tabs sidebar-tabs">
           <span class="sidebar-tabs__item tabs-item_active">Latest</span>
           <span class="sidebar-tabs__item">Popular</span>
@@ -163,14 +164,20 @@
       <div class="sidebar-item">
         <h5 class="sidebar-item__title">Tags</h5>
         <div class="sidebar-item__tags sidebar-tags">
-          <span class="sidebar-tags__item tag">CSS</span>
-          <span class="sidebar-tags__item tag">Javascript</span>
-          <span class="sidebar-tags__item tag">Jquery</span>
-          <span class="sidebar-tags__item tag">HTML5</span>
-          <span class="sidebar-tags__item tag">bootstrap</span>
-          <span class="sidebar-tags__item tag">css</span>
-          <span class="sidebar-tags__item tag">Javascript</span>
-          <span class="sidebar-tags__item tag">Jquery</span>
+          <div class="sidebar-tags__unit">
+            <span class="sidebar-tags__item tag">CSS</span>
+            <span class="sidebar-tags__item tag">Javascript</span>
+            <span class="sidebar-tags__item tag">Jquery</span>            
+          </div>
+          <div class="sidebar-tags__unit">
+            <span class="sidebar-tags__item tag">HTML5</span>
+            <span class="sidebar-tags__item tag">bootstrap</span>            
+          </div>
+          <div class="sidebar-tags__unit">
+            <span class="sidebar-tags__item tag">css</span>
+            <span class="sidebar-tags__item tag">Javascript</span>
+            <span class="sidebar-tags__item tag">Jquery</span>            
+          </div>
         </div>
       </div>
       <div class="sidebar-item">
@@ -210,6 +217,19 @@
         <li class="footer-menu__item"><a href="" class="footer-menu__link">Portfolio</a></li>
         <li class="footer-menu__item"><a href="" class="footer-menu__link">Blog</a></li>
         <li class="footer-menu__item"><a href="" class="footer-menu__link">Contact us</a></li>
+      </ul>
+      <p class="footer-main__copyright">
+        Created by akhoud 2016. All rights reserved
+      </p>
+    </div>
+    <div class="footer__secondary footer-secondary">
+      <ul class="footer-secondary__menu contact-menu">
+        <li class="contact-menu__item"><a class="contact-menu__link" href=""><span class="contact-menu__icon"><i class="fab fa-facebook-f"></i></span></a></li>
+        <li class="contact-menu__item"><a class="contact-menu__link" href=""><span class="contact-menu__icon"><i class="fab fa-twitter"></i></span></a></li>
+        <li class="contact-menu__item"><a class="contact-menu__link" href=""><span class="contact-menu__icon"><i class="fab fa-youtube"></i></span></a></li> 
+        <li class="contact-menu__item"><a class="contact-menu__link" href=""><span class="contact-menu__icon"><i class="fab fa-linkedin"></i></span></a></li>
+        <li class="contact-menu__item"><a class="contact-menu__link" href=""><span class="contact-menu__icon"><i class="fab fa-pinterest"></i></span></a></li>
+        <li class="contact-menu__item"><a class="contact-menu__link" href=""><span class="contact-menu__icon"><i class="fas fa-camera-retro"></i></span></a></li>
       </ul>
     </div>
   </footer>
