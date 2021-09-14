@@ -8,63 +8,62 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const merge = require('merge-stream');
 const streamqueue = require('streamqueue');
- 
+
 sass.compiler = require('node-sass');
 
 const cssFiles = [
-  './src/css/media.css'
+'./src/css/media.css'
 ]
 
 const jsFiles = [
-  './src/js/main.js'
+'./src/js/main.js'
 ]
 
 const sassFiles = [
-  './src/sass/main.sass'
+'./src/sass/main.sass'
 ]
 
 
 function compile(){
    // var sassStream,cssStream;
+   return streamqueue({ objectMode: true },
+    gulp.src(sassFiles).pipe(sass()),
+    gulp.src(cssFiles)
+    )
+   .pipe(concat('style.css')) 
+   .pipe(autoprefixer({
+    cascade: false
+  }))
 
-    return streamqueue({ objectMode: true },
-            gulp.src(sassFiles).pipe(sass()),
-            gulp.src(cssFiles)
-        )
-        .pipe(concat('style.css')) 
-    .pipe(autoprefixer({
-      cascade: false
-    }))
-
-    .pipe(cleanCSS({
-      level: 2
-    })) 
-      .pipe(gulp.dest('./build/css'))
-      .pipe(browserSync.stream())
+   .pipe(cleanCSS({
+    level: 2
+  })) 
+   .pipe(gulp.dest('./build/css'))
+   .pipe(browserSync.stream())
 }
 
-function styles(){
+ function styles(){
   return gulp.src(cssFiles)
-    .pipe(concat('style.css'))
-    .pipe(autoprefixer({
-      cascade: false
-    }))
+  .pipe(concat('style.css'))
+  .pipe(autoprefixer({
+    cascade: false
+  }))
 
-    .pipe(cleanCSS({
-      level: 2
-    }))
-    .pipe(gulp.dest('./build/css'))
-    .pipe(browserSync.stream())
+  .pipe(cleanCSS({
+    level: 2
+  }))
+  .pipe(gulp.dest('./build/css'))
+  .pipe(browserSync.stream())
 }
 
 function scripts(){
   return gulp.src(jsFiles)
-    .pipe(concat('script.js'))
-    .pipe(uglify({
-      toplevel: true
-    }))
-    .pipe(gulp.dest('./build/js'))
-    .pipe(browserSync.stream())
+  .pipe(concat('script.js'))
+  .pipe(uglify({
+    toplevel: true
+  }))
+  .pipe(gulp.dest('./build/js'))
+  .pipe(browserSync.stream())
 }
 
 function clean(){
