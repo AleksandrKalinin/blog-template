@@ -12,15 +12,15 @@ const streamqueue = require('streamqueue');
 sass.compiler = require('node-sass');
 
 const cssFiles = [
-	'./src/css/media.css'
+  './src/css/media.css'
 ]
 
 const jsFiles = [
-	'./src/js/main.js'
+  './src/js/main.js'
 ]
 
 const sassFiles = [
-	'./src/sass/main.sass'
+  './src/sass/main.sass'
 ]
 
 
@@ -32,55 +32,55 @@ function compile(){
             gulp.src(cssFiles)
         )
         .pipe(concat('style.css')) 
-		.pipe(autoprefixer({
-			cascade: false
-		}))
+    .pipe(autoprefixer({
+      cascade: false
+    }))
 
-		.pipe(cleanCSS({
-			level: 2
-		})) 
-	    .pipe(gulp.dest('./build/css'))
-	    .pipe(browserSync.stream())
+    .pipe(cleanCSS({
+      level: 2
+    })) 
+      .pipe(gulp.dest('./build/css'))
+      .pipe(browserSync.stream())
 }
 
 function styles(){
-	return gulp.src(cssFiles)
-		.pipe(concat('style.css'))
-		.pipe(autoprefixer({
-			cascade: false
-		}))
+  return gulp.src(cssFiles)
+    .pipe(concat('style.css'))
+    .pipe(autoprefixer({
+      cascade: false
+    }))
 
-		.pipe(cleanCSS({
-			level: 2
-		}))
-		.pipe(gulp.dest('./build/css'))
-		.pipe(browserSync.stream())
+    .pipe(cleanCSS({
+      level: 2
+    }))
+    .pipe(gulp.dest('./build/css'))
+    .pipe(browserSync.stream())
 }
 
 function scripts(){
-	return gulp.src(jsFiles)
-		.pipe(concat('script.js'))
-		.pipe(uglify({
-			toplevel: true
-		}))
-		.pipe(gulp.dest('./build/js'))
-		.pipe(browserSync.stream())
+  return gulp.src(jsFiles)
+    .pipe(concat('script.js'))
+    .pipe(uglify({
+      toplevel: true
+    }))
+    .pipe(gulp.dest('./build/js'))
+    .pipe(browserSync.stream())
 }
 
 function clean(){
-	return del(['build/*'])
+  return del(['build/*'])
 }
 
 function watch(){
-	browserSync.init({
-		server:{
-			baseDir: "./"
-		}
-	})
-	gulp.watch('./src/css/**/*.css', compile)
-	gulp.watch('./src/sass/**/*.sass', compile)
-	gulp.watch('./src/js/**/*.js', scripts)
-	gulp.watch("./*.html").on("change", browserSync.reload)
+  browserSync.init({
+    server:{
+      baseDir: "./"
+    }
+  })
+  gulp.watch('./src/css/**/*.css', compile)
+  gulp.watch('./src/sass/**/*.sass', compile)
+  gulp.watch('./src/js/**/*.js', scripts)
+  gulp.watch("./*.html").on("change", browserSync.reload)
 }
 
 gulp.task('styles', styles);
