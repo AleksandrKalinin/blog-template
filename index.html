@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
   <title>Blog template</title>
   <meta charset="utf-8">
@@ -21,7 +21,7 @@
       <li class="menu__item menu-item"><a class="menu-item__link menu-link" href="#contact">Contact us</a></li>
     </ul>
   </div>
-  <section class="intro" id="about">
+  <div class="intro" id="about">
     <div class="intro-content">
       <header class="header">
         <div class="header__logo header-logo">AKAD.</div>
@@ -32,12 +32,12 @@
         </div>
       </header>
     </div>
-  </section>
+  </div>
   <section class="main" id="posts">
     <div class="content">
       <div class="post">
         <div class="post-thumbnail post-thumbnail">
-          <img src="src/images/02.jpg" class="post-image">
+          <img src="src/images/02.jpg" class="post-image" alt="image">
         </div>
         <div class="post__items post-items">
           <span class="post-items__date">October 13, 2015</span>
@@ -61,7 +61,7 @@
       </div>
       <div class="post">
         <div class="post-thumbnail post-thumbnail">
-          <img src="src/images/03.jpg" class="post-image">
+          <img src="src/images/03.jpg" class="post-image" alt="image">
         </div>
         <div class="post__items post-items">
           <span class="post-items__date">October 13, 2015</span>
@@ -85,7 +85,7 @@
       </div>
       <div class="post">
         <div class="post-thumbnail post-thumbnail">
-          <img src="src/images/04.jpg" class="post-image">
+          <img src="src/images/04.jpg" class="post-image" alt="image">
         </div>
         <div class="post__items post-items">
           <span class="post-items__date">October 13, 2015</span>
@@ -110,7 +110,7 @@
     </div>
     <div class="sidebar">
       <div class="search-wrapper search">
-        <input class="sidebar__search" type="" name="" placeholder="SEARCH..." id="search">
+        <input class="sidebar__search" type="text" name="searchbar" placeholder="SEARCH..." id="search">
         <span class="search__icon" id="searchIcon">
           <i class="fas fa-search"></i>
         </span>
@@ -125,7 +125,7 @@
         <div class="sidebar-item__preview previews">
           <div class="previews__item preview-item">
             <div class="preview-item__thumbnail preview-thumbnail">
-              <img class="preview-thumbnail__image" src="src/images/02.jpg">
+              <img class="preview-thumbnail__image" src="src/images/02.jpg" alt="image">
             </div>
             <div class="preview-item__description preview-description">
               <h6 class="preview-description__title preview-title">Magna mollis ultricies</h6>
@@ -134,7 +134,7 @@
           </div>
           <div class="previews__item preview-item">
             <div class="preview-item__thumbnail preview-thumbnail">
-              <img class="preview-thumbnail__image" src="src/images/03.jpg">
+              <img class="preview-thumbnail__image" src="src/images/03.jpg" alt="image">
             </div>
             <div class="preview-item__description preview-description">
               <h6 class="preview-description__title preview-title">Magna mollis ultricies</h6>
@@ -143,7 +143,7 @@
           </div>
           <div class="previews__item preview-item">
             <div class="preview-item__thumbnail preview-thumbnail">
-              <img class="preview-thumbnail__image" src="src/images/04.jpg">
+              <img class="preview-thumbnail__image" src="src/images/04.jpg" alt="image">
             </div>
             <div class="preview-item__description preview-description">
               <h6 class="preview-description__title preview-title">Magna mollis ultricies</h6>
@@ -203,8 +203,8 @@
       <p class="newsletter-form__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.</p>
       <div class="newsletter-form__input newsletter-input">
-        <input type="" name="" class="newsletter-input__email">
-        <input type="submit" name="" class="newsletter-input__submit" value="send">
+        <input type="email" name="email" class="newsletter-input__email">
+        <input type="submit" name="submit" class="newsletter-input__submit" value="send">
       </div>
     </div>
   </section>
@@ -233,7 +233,7 @@
       </ul>
     </div>
   </footer>
-  <script type="text/javascript" src="src/libs/fontawesome/js/all.min.js"></script>
+  <script src="src/libs/fontawesome/js/all.min.js"></script>
   <script src="build/js/script.js"></script>
 </body>
 </html>
