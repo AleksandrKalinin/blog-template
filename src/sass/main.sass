@@ -51,7 +51,7 @@ body
 	width: 100%
 	height: 500px
 	overflow: hidden
-	background: url('../../../src/images/01.jpg')
+	background: url('../../build/images/01.jpg')
 	background-position: center center
 	background-size: cover
 
@@ -270,6 +270,15 @@ body
 .contact-menu__link
 	color: #9A9A9A
 	font-size: 17px
+
+.contact-menu__item, .contact-menu__link
+	transition: .2s ease
+
+.contact-menu__item:hover
+	transform: scale(1.1)
+
+.contact-menu__item:hover .contact-menu__link
+	color: #7BEEC7
 
 .main
 	padding: 150px 0 50px 0
