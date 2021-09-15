@@ -38,11 +38,3 @@ for (var i = 0; i < tabs.length; i++) {
   })
 }
 
-
-var search = document.getElementById('search');
-var searhIcon = document.getElementById('searchIcon'); 
-
-search.addEventListener('change', function() {
-  console.log("console");
-  searchIcon.style.display = 'none';
-})
