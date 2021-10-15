@@ -1,0 +1,240 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .main {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+
+  .content {
+    width: calc(100% - 380px);
+  }
+
+  .post, .post-thumbnail {
+    width: 100%;
+  }
+
+  .post-thumbnail {
+    height: 300px;
+  }
+
+  .newsletter {
+    width: 100%;
+  }
+
+  .newsletter-info, .newsletter-form {
+    width: calc( (100% - 30px) / 2);
+    height: 250px;
+  }
+
+  .newsletter-info__title, .newsletter-form__title {
+    font-size: 20px;
+  }
+
+  .footer-main {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .footer-secondary {
+    width: 100%;
+    padding: 0 20px;
+  }  
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .intro {
+    width: 100%;
+    height: 300px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .footer-main {
+    flex-direction: column;
+  }
+
+  .footer-secondary {
+    padding: 20px 0;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+  .intro-content {
+    padding: 0 20px;
+  }
+
+  .header {
+    height: 80px;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .newsletter-info, .newsletter-form {
+    width: calc(100% - 30px);
+    height: auto;
+  }
+
+  .newsletter-info {
+    margin-bottom: 20px;
+  }
+
+  .main {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar-tabs {
+    margin-bottom: 20px;
+  }
+
+  .search__icon {
+    left: 95%;
+  }
+}
+
+@media only screen and (max-width : 576px) {
+  .intro {
+    width: 100%;
+    height: 200px;
+  }
+
+  .footer-menu {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .search__icon {
+    left: 92%;
+  }
+
+  .post-thumbnail {
+    height: 200px;
+  } 
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .previews {
+    display: none;
+  }
+
+  .main {
+    padding: 50px 0 0 0;
+  }
+
+  .newsletter-info__title, .newsletter-form__title {
+    font-size: 16px;
+  } 
+
+  .newsletter-info__button, .newsletter-input__submit {
+    font-size: 13px;
+    width: 120px;
+    font-weight: 400;
+  } 
+
+  .newsletter-input__email {
+    width: 100%;
+    margin-bottom: 8px;
+    height: 40px;
+  }
+
+  .newsletter-input {
+    flex-direction: column;
+    align-items: flex-end;
+    height: auto;
+  } 
+
+  .newsletter-input__submit {
+    height: 40px;
+  }
+
+  .footer-menu {
+    font-size: 11px;
+  }
+
+}
+
+@media only screen and (max-width : 360px) {
+  .footer-menu {
+    flex-direction: column;
+  }
+
+  .footer-menu {
+    font-size: 14px;
+  }
+
+  .footer-menu__item {
+    margin: 8px 0;
+  }
+
+  .footer, .footer-main, .footer-menu {
+    height: auto;
+  }
+
+  .footer-menu {
+    padding: 16px 0;
+  }
+
+  .footer-main__copyright {
+    font-size: 12px;
+  }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+  .post-thumbnail {
+    height: 160px;
+  } 
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

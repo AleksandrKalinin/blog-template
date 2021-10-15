@@ -1,0 +1,505 @@
+*
+	box-sizing: border-box
+
+body
+	margin: 0 auto
+	padding: 0
+	font-family: 'Open Sans', sans-serif
+	position: relative
+
+.stop-scrolling
+	overflow: hidden
+	height: 100vh	
+
+.overlay
+	position: absolute
+	top: 0
+	left: 0
+	height: 100vh
+	width: 100%
+	background: rgba(51,51,51, 0.4)
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: .2s ease
+
+.overlay_open
+	transform: translate(-100%, 0)
+
+.overlay-menu
+	margin: 0
+	padding: 0
+	list-style-type: none
+	text-align: center
+
+.menu-item__link
+	font-family: 'Montserrat', sans-serif
+	font-size: 16px
+	text-transform: uppercase
+	color: #fff
+	text-decoration: none
+	letter-spacing: 1px
+	line-height: 48px
+	transition: .2s ease
+	padding: 4px
+
+.menu-item:hover .menu-item__link
+	color: #13dc98
+	border-bottom: 1px solid #13dc98
+
+.intro
+	width: 100%
+	height: 500px
+	overflow: hidden
+	background: url('../../build/images/01.jpg')
+	background-position: center center
+	background-size: cover
+
+.intro-content
+	width: 100%
+	height: 100%
+	padding: 0 80px 0 80px
+	background: rgba(153,153,153, 0.85)
+
+.header-logo
+	font-family: 'Montserrat', sans-serif
+	font-size: 18px
+	font-weight: 700
+	color: #60606E
+
+.header
+	width: 100%
+	height: 100px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: relative
+	z-index: 1
+
+.nav
+	position: relative
+	height: 30px
+	width: 40px
+	cursor: pointer
+
+.nav__bar
+	position: absolute
+	width: 40px
+	height: 2px
+	border-radius: 1px
+	background: #000
+	transform: translate(0, -2px)	
+	transition: .2s ease
+
+.top-bar
+	top: 0
+
+.middle-bar
+	top: 50%
+
+.bottom-bar
+	top: 100%	
+
+.top-bar_rotated
+	transform: rotate(45deg)
+	top: calc(50% - 1px)
+
+.middle-bar_rotated
+	display: none
+
+.bottom-bar_rotated	
+	transform: rotate(-45deg)
+	top: calc(50% - 1px)
+
+.newsletter
+	background: #7BEEC7
+	height: 330px
+	width: 100%
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: center
+
+.newsletter-info
+	height: 230px
+	width: 555px
+	color: #fff
+
+.newsletter-info__title
+	text-transform: uppercase
+	font-weight: 700
+	line-height: 48px
+	font-size: 30px
+	letter-spacing: 1px 
+	margin: 0 0 14px 0	
+
+.newsletter-info__button
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 160px
+	height: 50px
+	color: #7BEEC7
+	background: #ffffff
+	text-transform: uppercase
+	text-decoration: none
+	font-weight: 700
+	border: 1px solid transparent
+	transition: .2s ease
+
+.newsletter-info__button:hover
+	border: 1px solid #ffffff
+	background: #7BEEC7
+	color: #fff
+
+.newsletter-form
+	width: 555px
+	background: #fff
+	padding: 20px
+	height: 230px
+
+.newsletter-form__title	
+	font-family: 'Montserrat', sans-serif
+	line-height: 36px
+	font-size: 24px
+	font-weight: 700
+	color: #60606E
+	letter-spacing: 1px
+	text-transform: uppercase
+	margin: 0
+
+.newsletter-form__text
+	margin: 8px 0 16px 0
+	line-height: 24px
+	font-size: 16px
+	font-weight: 400
+	color: #999999		
+
+.newsletter-input
+	height: 48px
+	width: 100%
+	display: flex
+	font-family: 'Montserrat', sans-serif
+
+.newsletter-input__email
+	height: 100%
+	width: calc(100% - 130px)
+	margin: 0
+	border: 1px solid #CDCDCD
+	outline: none
+	color: #CDCDCD
+	padding: 0 20px
+	font-weight: 700
+	letter-spacing: 1px
+	font-size: 12px
+	text-transform: uppercase
+
+.newsletter-input__submit
+	margin: 0
+	height: 100%	
+	width: 130px
+	background: #7BEEC7
+	border: none
+	outline: none
+	cursor: pointer
+	color: #fff
+	text-transform: uppercase
+	font-weight: bold
+	font-size: 14px
+	letter-spacing: 1px
+	border: 1px solid transparent
+	transition: .2s ease
+
+.newsletter-input__submit:hover
+	border: 1px solid #7BEEC7
+	color: #7BEEC7
+	background: #ffffff
+
+.footer
+	height: 150px
+	background: #fff
+
+.footer-main
+	height: 100px
+	width: 1140px
+	margin: 0 auto
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.footer-menu
+	height: 100px
+	padding: 0
+	margin: 0
+	display: flex
+	align-items: center
+	justify-content: space-between
+	list-style-type: none	
+	text-transform: uppercase
+	width: 560px
+	font-size: 14px
+
+.footer-menu__link
+	text-decoration: none
+	color: #9A9A9A
+	transition: .2s ease
+
+.footer-menu__link:hover
+	color: #7BEEC7
+
+.footer-main__copyright
+	margin: 0
+	text-transform: uppercase
+	font-size: 14px
+	color: #9A9A9A
+
+.footer-secondary
+	width: 1140px
+	margin: -20px auto 0
+	display: flex
+	justify-content: flex-end
+
+.contact-menu
+	padding: 0
+	margin: 0
+	display: flex
+	justify-content: space-between
+	list-style-type: none
+	width: 175px
+
+.contact-menu__link
+	color: #9A9A9A
+	font-size: 17px
+
+.contact-menu__item, .contact-menu__link
+	transition: .2s ease
+
+.contact-menu__item:hover
+	transform: scale(1.1)
+
+.contact-menu__item:hover .contact-menu__link
+	color: #7BEEC7
+
+.main
+	padding: 150px 0 50px 0
+	width: 1140px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+
+.content
+	width: 760px
+
+.sidebar
+	width: 260px
+
+.search-wrapper
+	margin-bottom: 50px
+	position: relative
+
+.sidebar__search
+	width: 100%
+	height: 40px
+	padding: 0 36px 0 16px
+	background: #ECECEC
+	border: none
+	font-weight: 700
+	letter-spacing: 0.5px
+	font-weight: 12px
+	color: #999999
+	border-radius: none
+	outline: none
+
+.search__icon
+	top: 0
+	left: 230px
+	position: absolute
+	transform: translate(0, 50%)
+	color: #999999
+	font-size: 15px
+
+.sidebar-item
+	margin-bottom: 50px
+
+.sidebar-item__title
+	font-family: 'Montserrat', sans-serif
+	font-size: 14px
+	color: #60606e
+	text-transform: uppercase
+	font-weight: 700
+	letter-spacing: 0.5px
+
+.sidebar-categories__title
+	margin-bottom: 10px
+
+.sidebar-tabs
+	display: flex
+	justify-content: space-between
+	border-bottom: 1px solid #999999
+	margin-bottom: 24px
+
+.sidebar-tabs__item
+	color: #999
+	font-family: 'Montserrat', sans-serif
+	font-size: 12px
+	font-weight: 700
+	line-height: 48px
+	text-transform: uppercase
+	width: 33.33%
+	text-align: center
+	cursor: pointer
+
+.previews
+	display: flex
+	flex-direction: column
+	height: 260px
+	justify-content: space-between
+
+.preview-item
+	display: flex
+	cursor: pointer
+	transition: .2s ease
+
+.preview-item:hover
+	transform: scale(1.05)
+
+.preview-description
+	padding: 16px 0 16px 0
+	margin-left: 16px
+
+.preview-title
+	margin: 0
+	color: #60606E
+	font-family: 'Montserrat', sans-serif
+	font-weight: 700
+	font-size: 14px
+	text-transform: uppercase
+	line-height: 18px
+
+.preview-date
+	color: #999999
+	font-size: 12px
+	margin: 0
+
+.preview-thumbnail
+	width: 80px
+	height: 80px
+
+.preview-thumbnail__image
+	width: 80px
+	height: 80px
+	object-fit: cover	
+	display: block
+	transition: .2s ease
+
+.tabs-item_active	
+	color: #60606e
+
+.sidebar-tags
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+
+.sidebar-tags__unit
+	display: flex
+
+.sidebar-tags__item
+	background: #e5e5e5
+	color: #999999
+	font-size: 12px
+	font-weight: 700
+	font-family: 'Montserrat', sans-serif
+	text-transform: uppercase
+	letter-spacing: 0.5px
+	padding: 0 13px
+	height: 30px
+	min-width: 65px
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: 6px
+	margin-right: 6px
+
+.category
+	display: flex
+	justify-content: space-between
+	padding: 0 16px
+	font-size: 14px
+	line-height: 48px
+	color: #60606E
+	border-bottom: 1px solid #999999
+
+.category-item
+	margin: 0
+
+.post
+	width: 760px
+	margin-bottom: 100px
+
+.post-content__title
+	font-family: 'Montserrat', sans-serif
+	text-transform: uppercase
+	color: #60606E
+	font-size: 18px
+	margin: 8px 0 0 0
+	font-weight: 700
+
+.post-content__text
+	color: #999999
+	font-size: 14px
+	line-height: 24px
+
+.post-content__link
+	text-transform: uppercase
+	color: #60606E
+	font-size: 14px
+	font-weight: 700
+	letter-spacing: 1px
+	text-decoration: none 
+	transition: .2s ease
+
+.post-content__link:hover
+	text-decoration: underline
+	color: #7BEEC7 
+
+.post-thumbnail
+	height: 500px
+	width: 755px
+	overflow: hidden
+	margin-bottom: 20px
+
+.post-image
+	height: 100%
+	width: 100%
+	object-fit: cover	
+
+.post-items
+	height: 50px
+	display: flex
+	align-items: center
+
+.post-items__date
+	display: flex
+	background: #7BEEC7
+	width: 165px
+	color: #ffffff
+	font-weight: 700
+	font-family: 'Montserrat', sans-serif
+	font-size: 14px
+	height: 30px
+	padding: 0 12px
+	line-height: 28px
+	letter-spacing: 0.5px
+	text-transform: uppercase
+
+.post-comments, .post-likes
+	padding: 0 5px
+	width: 60px
+	display: flex
+	justify-content: space-around
+
+.post-comments__icon
+	color: #999999
+
+.post-likes__icon
+	color: #EA6A6A
